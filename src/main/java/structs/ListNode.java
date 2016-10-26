@@ -3,11 +3,11 @@ package structs;
 /**
  * @author anobis <austin.nobis@amd.com>
  */
-public class Node {
+public class ListNode {
    public int val;
-   public Node next;
+   public ListNode next;
 
-   public Node(int val, Node next) {
+   public ListNode(int val, ListNode next) {
       this.val = val;
       this.next = next;
    }

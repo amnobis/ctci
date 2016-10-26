@@ -1,26 +1,26 @@
 package ch2;
 
-import structs.Node;
+import structs.ListNode;
 
 /**
  * @author anobis <austin.nobis@amd.com>
  */
 public class Problem2 {
    public static void main(String[] args) {
-      Node n7 = new Node(6, null);
-      Node n6 = new Node(5, n7);
-      Node n5 = new Node(3, n6);
-      Node n4 = new Node(3, n5);
-      Node n3 = new Node(3, n4);
-      Node n2 = new Node(2, n3);
-      Node n1 = new Node(1, n2);
+      ListNode n7 = new ListNode(6, null);
+      ListNode n6 = new ListNode(5, n7);
+      ListNode n5 = new ListNode(3, n6);
+      ListNode n4 = new ListNode(3, n5);
+      ListNode n3 = new ListNode(3, n4);
+      ListNode n2 = new ListNode(2, n3);
+      ListNode n1 = new ListNode(1, n2);
 
       System.out.println(kthToLast(n1, 6).val);
    }
 
-   public static Node kthToLast(Node head, int k) {
-      Node p1 = head;
-      Node p2 = head;
+   public static ListNode kthToLast(ListNode head, int k) {
+      ListNode p1 = head;
+      ListNode p2 = head;
 
       for (int i = 0; i < k; ++i) {
          if (p1 == null) {

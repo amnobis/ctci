@@ -1,20 +1,20 @@
 package ch2;
 
-import structs.Node;
+import structs.ListNode;
 
 /**
  * @author anobis <austin.nobis@amd.com>
  */
 public class Problem5 {
    public static void main(String[] args) {
-      Node n3 = new Node(3, null);
-      Node n2 = new Node(2, n3);
-      Node n1 = new Node(1, n2);
+      ListNode n3 = new ListNode(3, null);
+      ListNode n2 = new ListNode(2, n3);
+      ListNode n1 = new ListNode(1, n2);
 
-      Node n7 = new Node(7, null);
-      Node n6 = new Node(6, n7);
-      Node n5 = new Node(5, n6);
-      Node n4 = new Node(4, n5);
+      ListNode n7 = new ListNode(7, null);
+      ListNode n6 = new ListNode(6, n7);
+      ListNode n5 = new ListNode(5, n6);
+      ListNode n4 = new ListNode(4, n5);
 
    }
 }

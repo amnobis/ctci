@@ -1,27 +1,27 @@
 package ch2;
 
-import structs.Node;
+import structs.ListNode;
 
 /**
  * @author anobis <austin.nobis@amd.com>
  */
 public class Problem6 {
    public static void main(String[] args) {
-      Node n7 = new Node(1, null);
-      Node n6 = new Node(3, null);
-      Node n5 = new Node(2, n6);
-      Node n4 = new Node(1, n5);
+      ListNode n7 = new ListNode(1, null);
+      ListNode n6 = new ListNode(3, null);
+      ListNode n5 = new ListNode(2, n6);
+      ListNode n4 = new ListNode(1, n5);
 
       System.out.println(isPalindrome(n4));
    }
 
-   public static boolean isPalindrome(Node head) {
+   public static boolean isPalindrome(ListNode head) {
       if (head == null) {
          return true;
       }
 
-      Node rev = reverse(middle(head));
-      Node p1 = rev;
+      ListNode rev = reverse(middle(head));
+      ListNode p1 = rev;
 
 
       while (head != null && rev != null) {
@@ -34,9 +34,9 @@ public class Problem6 {
       return true;
    }
 
-   public static Node middle(Node head) {
-      Node slow = head;
-      Node fast = head;
+   public static ListNode middle(ListNode head) {
+      ListNode slow = head;
+      ListNode fast = head;
 
       while (fast.next != null && fast.next.next != null) {
          slow = slow.next;
@@ -49,16 +49,16 @@ public class Problem6 {
       return slow;
    }
 
-   public static Node reverse(Node head) {
+   public static ListNode reverse(ListNode head) {
       if (head == null) {
          return head;
       }
-      Node prev = head;
+      ListNode prev = head;
       head = head.next;
       prev.next = null;
 
       while (head != null) {
-         Node tmp = head;
+         ListNode tmp = head;
          head = head.next;
          tmp.next = prev;
          prev = tmp;

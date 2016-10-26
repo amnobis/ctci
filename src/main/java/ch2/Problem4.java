@@ -1,19 +1,19 @@
 package ch2;
 
-import structs.Node;
+import structs.ListNode;
 
 /**
  * @author anobis <austin.nobis@amd.com>
  */
 public class Problem4 {
    public static void main(String[] args) {
-      Node n7 = new Node(6, null);
-      Node n6 = new Node(5, n7);
-      Node n5 = new Node(5, n6);
-      Node n4 = new Node(5, n5);
-      Node n3 = new Node(5, n4);
-      Node n2 = new Node(5, n3);
-      Node n1 = new Node(7, n2);
+      ListNode n7 = new ListNode(6, null);
+      ListNode n6 = new ListNode(5, n7);
+      ListNode n5 = new ListNode(5, n6);
+      ListNode n4 = new ListNode(5, n5);
+      ListNode n3 = new ListNode(5, n4);
+      ListNode n2 = new ListNode(5, n3);
+      ListNode n1 = new ListNode(7, n2);
 
       partition(n1, 6);
       while (n1 != null) {
@@ -22,11 +22,11 @@ public class Problem4 {
       }
    }
 
-   public static  void partition(Node head, int value) {
+   public static  void partition(ListNode head, int value) {
       if (head == null) {
          return;
       }
-      Node curr = head;
+      ListNode curr = head;
 
       while (head != null) {
          if (curr.val >= value) {
